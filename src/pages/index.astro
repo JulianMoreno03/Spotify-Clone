@@ -5,16 +5,24 @@ import PlayListItemCard from '../components/PlayListItemCard.astro';
 ---
 
 <Layout title="Spotify Clone">
-	<div id="playlist-container" class="relative transition-all duration-1000 ">
+	<div id="playlist-container" class="relative transition-all duration-1000 bg-green-600">
         
-
-
         <div class="relative z-10 px-6">
             <!--Mensaje de bienvenida -->
-            <h2 class="text-4xl">Buenos dias</h2>
+            <h2 class="text-4xl text-white pt-4">Buenos dias</h2>
+            <div class="flex flex-wrap mt-6 gap-4 ">
+           
             {
                 playlists.map(playlists => <PlayListItemCard playlist={playlists}/>)
             }
+             </div>
+        </div>
+
+
+        <!--Degradado -->
+        <div
+        class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/80">
+
         </div>
     </div>
 </Layout>
